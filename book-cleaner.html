@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book-Cleaner</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        
+
+        h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        a {
+            color: #d9534f;
+            text-decoration: none;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea,
+        select {
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light p-4">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./for_front.html">
+                    <img src="https://forefrontclean.co.uk/wp-content/uploads/2022/05/Logo-02.svg" alt="Forefront All Cleaning Logo" width="180px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                       
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                SERVICES 
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="./Carpet-cleaning.html">CARPET CLEANING</a></li>
+                                <li><a class="dropdown-item" href="./Commercial-cleaning.html">COMMERCIAL CLEANING</a></li>
+                                <li><a class="dropdown-item" href="./Domestic-cleaning.html">DOMESTIC CLEANING</a></li>
+                                <li><a class="dropdown-item" href="./EndofTenancy-Cleaning.html">END OF TENANCY CLEANING</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="./book-cleaner.html">BOOK A CLEANER</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class=" pb-5">
+            <div class="form-container">
+                <div class="container-fluid">
+                    <h2>Book Our Cleaning Services Now!</h2>
+                    <p style="word-break: keep-all;">Please use the form below to enter details about your property and
+                        receive a quote for cleaning
+                        services. We will get back to you within one hour Monday to Saturday from 9 am to 6 pm.</p>
+                    <p>Having trouble with the form? You can also Wapp us on <a href="https://wa.me/447943272519" target="_blank">07943 272 519</a>
+                        to
+                        discuss your cleaning needs.</p>
+                </div>
+
+                <form class="pt-5 container-fluid text-center">
+                    <div class="form-group">
+                        <input style="width: 40%;" type="text" placeholder="Full Name" id="full-name" required> <input style="width: 40%;" type="tel"
+                            placeholder="Telephone Number" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <input style="width: 40%;" type="email" placeholder="Email Address" id="email" required> <input style="width: 40%;" type="text"
+                            placeholder="Postal Code" id="postal-code" required>
+                    </div>
+
+                    <div class="form-group " >
+                        <select  style="width: 80%;" id="enquiry-type" name="enquiry-type"  required>
+                            <option value="weekly">Having Weekly Cleaner</option>
+                            <option value="fortnightly">Having a Fortnightly Cleaner</option>
+                            <option  value="one-off">Having a One Off Clean</option>
+                            <option value="existing-client">I'm an Existing Client</option>
+                            <option value="looking-for-services">Looking For Cleaning Services?</option>
+                        </select>
+                    </div>
+                    <div class="form-group ">
+
+                        <textarea style="width: 80%;" id="message" placeholder="Message (optional)" name="message"></textarea>
+                    </div>
+                    <button type="submit" style="display: block; margin-left: 150px;">Submit</button>
+                </form>
+            </div>
+
+        </section>
+    </main>
+    <footer class="d-flex justify-content-center bg-primary-subtle p-2 ">
+        <div class=" fs-5 ">© 2024 Forefront All Cleaning Ltd | Designed and developed by Haptech</div>
+    </footer>
+</body>
+
+</html>

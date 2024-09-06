@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRONT PAGE</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        article {
+            background-image: url(https://img.freepik.com/free-photo/view-frame-with-blue-cleaning-products_23-2148357453.jpg?ga=GA1.1.2030753178.1709143249&semt=ais_hybrid);
+            height: 350px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        h2 {
+            font-size: 50px;
+            font-size: 5rem;
+            letter-spacing: 0px;
+            font-weight: 600;
+            text-transform: none;
+            font-style: normal;
+            text-decoration: none;
+            line-height: 1em;
+        }
+
+        article a {
+            background-color: red;
+            border: none;
+            padding: 15px 50px 13px 50px;
+            font-size: 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            text-align: center;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        article .bottom {
+            margin-left: 200px;
+            margin-top: 20px;
+        }
+
+        article span {
+            background-color: rgb(105, 199, 193);
+            border: none;
+            padding: 15px 50px 13px 50px;
+            font-size: 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .dropdown {
+            cursor: pointer;
+        }
+
+        section h2 {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .buttom {
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+            border: none;
+            font-size: 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            text-align: center;
+            font-weight: bold;
+            font-size: 17px;
+            background-color: blue;
+            padding: 6px 6px 5px 17px;
+            display: inline-block;
+
+        }
+
+
+        .card-footer {
+            border: 1px solid black;
+            padding: 10px;
+            width: 190px;
+        }
+
+        .icon {
+            font-size: 40px;
+        }
+
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 2rem;
+            }
+
+            article a,
+            article span {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+
+            .dropdown-menu {
+                font-size: 0.9rem;
+            }
+
+            .button {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+
+            .card {
+                margin-bottom: 20px;
+                width: 100%;
+            }
+
+            .d-flex {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .button {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+
+            .card-footer {
+                width: 100%;
+            }
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 40px;
+        }
+
+        .content {
+            max-width: 500px;
+            text-align: left;
+        }
+
+        .content h1 {
+            margin-bottom: 20px;
+            color: #1b1e41;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .content a {
+            color: #c8464b;
+            text-decoration: none;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .image-container {
+            max-width: 500px;
+            margin-left: 40px;
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .cleaning-section {
+            padding: 40px 0;
+        }
+        .cleaning-section img {
+            width: 100%;
+            height: 800px;
+            border-radius: 10px;
+        }
+        .cleaning-section .content {
+            padding: 20px;
+        }
+        .cleaning-section .btn-primary {
+            background-color: #007bff;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 30px;
+        }
+        .cleaning-section .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light p-4">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./for_front.html">
+                    <img src="https://forefrontclean.co.uk/wp-content/uploads/2022/05/Logo-02.svg" alt="Forefront All Cleaning Logo" width="180px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                       
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                SERVICES 
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="./Carpet-cleaning.html">CARPET CLEANING</a></li>
+                                <li><a class="dropdown-item" href="./Commercial-cleaning.html">COMMERCIAL CLEANING</a></li>
+                                <li><a class="dropdown-item" href="./Domestic-cleaning.html">DOMESTIC CLEANING</a></li>
+                                <li><a class="dropdown-item" href="./EndofTenancy-Cleaning.html">END OF TENANCY CLEANING</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="./book-cleaner.html">BOOK A CLEANER</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <article>
+        <div class="pt-2">
+            <h2 class=" d-flex justify-content-center">Professional House Cleaning <br> Services in Birmingham</h2>
+        </div>
+
+        <div class="d-flex justify-content-center pt-2">
+            <p class=" fs-4 align-content-center align-items-center">Your premier choice for professional housekeeping
+                and residential cleaning services.</p>
+        </div>
+
+        <div class="d-flex bottom">
+            <a href="./book-cleaner.html" class="text-decoration-none text-white">BOOOK a cleaner online</a>
+            <a  href="https://wa.me/447943272519" style="text-decoration: none; color: white; background-color: rgb(123, 168, 152);" class="mx-3">WhatsApp us at 07943 272 519</a>
+        </div>
+    </article>
+
+    <main>
+        <section class="pt-5">
+            <div>
+                <h2 class=" d-flex justify-content-center">Our Cleaning Services</h2>
+                <div class=" d-flex justify-content-center">
+                    <span style="letter-spacing: 0px; word-spacing: 2px; font-size: 20px;">Committed to providing
+                        professional, reliable cleaning services to both residential and commercial <br>
+                        <span class="d-flex justify-content-center">customers throughout the Birmingham metropolitan
+                            region.</span></span>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-around pt-5">
+                <div>
+                    <div class="card-header">
+                        <img src="https://forefrontclean.co.uk/wp-content/uploads/2022/06/shutterstock_1886090857.webp"
+                            width="300px" alt="">
+                    </div>
+                    <div class="card-body">
+                        <a href="./Domestic-cleaning.html" target="_blank">Domestic cleaning <br> services</a>
+                        <p>provide comprehensive home <br> cleaning solutions through skilled <br> home cleaners.</p>
+                    </div>
+                    <div class="card-footer" style="border-radius: 50px;">
+                        <div><a href="./Domestic-cleaning.html" target="_blank"
+                                class="text-decoration-none text-dark">Check details ></a></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card-header">
+                        <img src="https://forefrontclean.co.uk/wp-content/uploads/2022/06/shutterstock_563057599.webp"
+                            width="300px" alt="">
+                    </div>
+                    <div class="card-body">
+                        <a href="./Commercial-cleaning.html" target="_blank">Commercial cleaning <br> services</a>
+                        <p>provide office cleaner services,<br> commercial window cleaning <br> services, to keep them
+                            tidy.</p>
+                    </div>
+                    <div class="card-footer" style="border-radius: 50px;">
+                        <div><a href="./Commercial-cleaning.html" target="_blank"
+                                class="text-decoration-none text-dark">Check details ></a></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card-header">
+                        <img src="https://forefrontclean.co.uk/wp-content/uploads/2022/06/shutterstock_1416345794.webp"
+                            width="300px" alt="">
+                    </div>
+                    <div class="card-body">
+                        <a href="./EndofTenancy-Cleaning.html" target="_blank">End of Tenancy Cleaning <br>Services</a>
+                        <p>Leave your rental accommodation <br> squeaky clean and get your full <br> deposit back from
+                            your landlord.</p>
+                    </div>
+                    <div class="card-footer" style="border-radius: 50px;">
+                        <div><a href="./EndofTenancy-Cleaning.html" target="_blank"
+                                class="text-decoration-none text-dark">Check details ></a></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card-header">
+                        <img src="https://forefrontclean.co.uk/wp-content/uploads/2022/06/shutterstock_1079107034.webp"
+                            width="300px" alt="">
+                    </div>
+                    <div class="card-body">
+                        <a href="./Carpet-cleaning.html" target="_blank">Carpet cleaning services</a>
+                        <p>are designed to thoroughly remove <br> stains and refresh your carpets to <br> brand new.</p>
+                    </div>
+                    <div class="card-footer " style="border-radius: 40px;">
+                        <div><a href="./Carpet-cleaning.html" target="_blank"
+                                class="text-decoration-none text-dark">Check details ></a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding-top: 50px;">
+            <h2 class="d-flex justify-content-center">Why only Forefront All Cleaning</h2>
+            <div style="padding-top: 50px;" class=" d-flex justify-content-around m-3">
+                <div>
+                    <div class="text-center">
+                        <div class="icon"><span class="fas fa-handshake"></span></div>
+                        <h4>Trusted staff</h4>
+                        <label class="align-items-center fs-2 text-dark-emphasis">.........</label>
+                    </div>
+                    <div class="text-center">All our cleaners have previous <br> experience
+                        and have passed <br> necessary checks.</div>
+                </div>
+                <div>
+                    <div class="text-center">
+                        <div class="icon"><span class="bi bi-calendar-check"></span></div>
+                        <h4>Flexible slots</h4>
+                        <label class="align-items-center fs-2 text-dark-emphasis">.........</label>
+                    </div>
+                    <div class="text-center">Including late nights, weekends <br> and bank holidays</div>
+                </div>
+                <div>
+                    <div class="text-center">
+                        <div class="icon"><span class="fas fa-coins"></span></div>
+                        <h4>Flat hourly rates</h4>
+                        <label class="align-items-center fs-2 text-dark-emphasis">.........</label>
+                    </div>
+                    <div class="text-center"> No surprise charges - what we <br> quote is what you'll pay.</div>
+                </div>
+                <div>
+                    <div class="text-center">
+                        <div class="icon"><span class="fab fa-wpforms "></span></div>
+                        <h4>Free quotation</h4>
+                        <label class="align-items-center fs-2 text-dark-emphasis">.........</label>
+                    </div>
+                    <div class="text-center">Fill in the contact form or call us <br> on the phone for a free quote.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding-top: 70px;">
+            <div class="cleaning-section">
+                <div class="container">
+                    <div class="row align-items-center">
+                        
+                        <div class="col-md-6">
+                            <img src="https://img.freepik.com/free-photo/hands-cleaning-elevator-buttons_23-2149345545.jpg?ga=GA1.1.2030753178.1709143249&semt=ais_hybrid" alt="Cleaning Image" class="img-fluid">
+                        </div>
+                        
+                        <div class="col-md-6 content">
+                            <h1>Domestic Cleaning Services in Birmingham</h1>
+                            <p>Are you tired of coming home to a messy house?</p>
+                            <p>At Forefront All Cleaning, we offer a full suite of cleaning solutions to meet all of your residential needs. Whether you require regularly scheduled <a href="./Domestic-cleaning.html">home cleaners</a> or an occasional deep clean, our experienced team takes great pride in delivering consistently for Forefront All Cleaning, one of the leading cleaning agencies in Birmingham.</p>
+                            <p>As the premier cleaning services in Birmingham, we come highly recommended by our satisfied customers for cost-effective and reliable cleaning services. With over a decade of experience, our services in Birmingham have earned wide acclaim for exceptional performance.</p>
+                            <p>Among the many cleaning companies in Birmingham, Forefront All Cleaning stands out as the premier choice. Regarding pricing, our rates remain highly competitive relative to industry averages in Birmingham. <a href="./book-cleaner.html">Choose Forefront All Cleaning</a> to experience superior house cleaning service at an excellent value.</p>
+                            <a href="./book-cleaner.html" class="btn btn-primary text-white">Book Domestic Cleaning</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+
+            <div class="container">
+                <div class="content">
+                    <h1>Commercial Cleaners You Can Rely On</h1>
+                    <p>
+                        Looking for a reliable commercial <a href="./Commercial-cleaning.html" style="display: block;">office cleaner in Birmingham</a>? Look no further
+                        than our
+                        experienced professionals at Forefront All Cleaning.
+                    </p>
+                    <p>
+                        We provide top-notch commercial cleaning services for all types of commercial properties,
+                        including offices,
+                        shops, restaurants, hotels, and more. You can rest assured that your property will be in good
+                        hands when you
+                        entrust us with its cleaning and maintenance.
+                    </p>
+                    <a href="./book-cleaner.html" class="btn btn-primary text-white" style="border-radius: 10px; padding: 10px 30px;">Book Domestic Cleaning</a>
+                </div>
+                <div class="image-container">
+                    <img src="https://img.freepik.com/free-photo/still-life-cleaning-tools_23-2150552219.jpg?ga=GA1.1.2030753178.1709143249&semt=ais_hybrid"
+                        alt="Cleaning tools on stairs">
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="d-flex justify-content-center bg-primary-subtle p-2">
+        <div class=" fs-5">© 2024 Forefront All Cleaning Ltd | Designed and developed by Haptech</div>
+    </footer>
+</body>
+
+</html>

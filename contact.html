@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        
+        .contact-section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .contact-section p,
+        .contact-section address {
+            margin-bottom: 10px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            padding: 10px;
+            background-color: #e30613;
+            
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        textarea {
+            height: 300px;
+            width: 500px;
+            resize: vertical;
+        }
+    </style>
+</head>
+
+<body class="container-fluid">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light p-4">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./for_front.html">
+                    <img src="https://forefrontclean.co.uk/wp-content/uploads/2022/05/Logo-02.svg" alt="Forefront All Cleaning Logo" width="180px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                       
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                SERVICES 
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="./Carpet-cleaning.html">CARPET CLEANING</a></li>
+                                <li><a class="dropdown-item" href="./Commercial-cleaning.html">COMMERCIAL CLEANING</a></li>
+                                <li><a class="dropdown-item" href="./Domestic-cleaning.html">DOMESTIC CLEANING</a></li>
+                                <li><a class="dropdown-item" href="./EndofTenancy-Cleaning.html">END OF TENANCY CLEANING</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="./book-cleaner.html">BOOK A CLEANER</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="contact-section d-flex justify-content-around pb-3">
+            <div >
+                <h2>Contact Us</h2>
+            <p>If you have any questions, concerns, or queries regarding a custom <br> cleaning job – do not hesitate and
+                contact us via the form.</p>
+            <p>Alternatively, call us on <a href="tel:+91777737737373" class="text-decoration-none" style="color: brown;">07943 272 519</a> to discuss your requirements.</p>
+            <address>
+                Forefront All Cleaning Ltd<br>
+                Unit 30, 363-365 Coventry Road<br>
+                Small Heath, Birmingham<br>
+                B10 0SW
+            </address>
+            </div>
+
+            <div>
+                <form class="contact-form">
+                    <div class="form-group">
+                    <label for="">Name *</label><br>
+                    <input type="text" placeholder="First Name" required>  <input type="text" placeholder="Last Name" required>
+                    </div>
+                    <div class="form-group">
+                    <label for="">Phone Number</label><br>
+                    <input type="text" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                    <label for="">Email *</label><br>
+                    <input type="email" placeholder="" required>
+                    </div>
+                    <label for="">Comment or Message *</label>
+                    <div class="form-group">
+                    
+                    <textarea placeholder="Comment or Message" required></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="d-flex justify-content-center bg-primary-subtle p-2">
+        <div class=" fs-5">© 2024 Forefront All Cleaning Ltd | Designed and developed by Haptech</div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domestic-cleaning</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            /* Make the header fixed at the top */
+            top: 0;
+            /* Align to the top of the viewport */
+            width: 100%;
+            /* Full width of the viewport */
+            z-index: 1000;
+            /* Ensure it stays above other content */
+        }
+
+        body {
+            margin: 0;
+            padding-top: 70px;
+            /* Adjust this value based on the height of your header */
+        }
+
+        .navbar-nav .nav-link {
+            margin-left: 15px;
+        }
+
+
+
+        .content {
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff0066;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background-color: #cc0052;
+        }
+
+        .image {
+            flex-basis: 50%;
+            text-align: right;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: 600px;
+            border-radius: 5px;
+        }
+
+        .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        /* New CSS for heading section icons */
+        .heading-icons .icon {
+            color: #ff0066;
+            /* Change this color to your desired icon color */
+        }
+
+        @media only screen and (max-width: 600px) {
+            body {
+                font-size: 14px;
+                /* Adjust font size for better readability */
+            }
+
+            .container {
+                padding: 10px;
+                /* Reduce padding for smaller screens */
+                box-shadow: none;
+                /* Remove shadow for simpler look */
+            }
+
+            header {
+                box-shadow: none;
+                /* Remove shadow for a cleaner header */
+            }
+
+            .navbar {
+                padding: 8px 10px;
+                /* Adjust padding for smaller screens */
+            }
+
+            .navbar-nav .nav-link {
+                margin-left: 10px;
+                /* Reduce margin between nav links */
+            }
+
+            .content {
+                max-width: 100%;
+                /* Full width for content */
+                padding: 10px;
+                /* Reduce padding */
+            }
+
+            .image {
+                text-align: center;
+                /* Center image for smaller screens */
+                flex-basis: 100%;
+                /* Full width */
+                margin-top: 20px;
+                /* Add margin for spacing */
+            }
+
+            .image img {
+                width: 100%;
+                /* Full width */
+                height: auto;
+                /* Adjust height for aspect ratio */
+            }
+
+            .heading-icons {
+                flex-direction: column;
+                /* Stack icons vertically */
+                padding: 10px;
+                /* Add padding for spacing */
+            }
+
+            .heading-icons .icon {
+                font-size: 30px;
+                /* Reduce icon size */
+                color: #ff0066;
+                /* Ensure color is set for icons */
+            }
+
+            .accordion-button {
+                font-size: 16px;
+                /* Adjust font size for better readability */
+            }
+
+            .accordion-body {
+                padding: 15px;
+                /* Adjust padding for better spacing */
+            }
+
+            footer {
+                padding: 10px;
+                /* Adjust footer padding */
+            }
+
+            footer .fs-5 {
+                font-size: 14px;
+                /* Reduce font size for smaller screens */
+            }
+
+            /* Ensure the image appears below the content on smaller screens */
+
+
+            .image {
+                order: 2;
+                /* Move the image below the content */
+                margin-top: 20px;
+                /* Space between content and image */
+            }
+        }
+
+
+
+        section {
+            padding: 20px 0;
+        }
+
+        .pt-5 {
+            padding-top: 40px;
+        }
+
+        .pb-5 {
+            padding-bottom: 40px;
+        }
+
+        .accordion-button {
+            border-radius: 0;
+        }
+
+        .accordion-body {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #e9ecef;
+            padding: 15px;
+            text-align: center;
+        }
+
+        footer .fs-5 {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./for_front.html">
+                    <img src="https://forefrontclean.co.uk/wp-content/uploads/2022/05/Logo-02.svg"
+                        alt="Forefront All Cleaning Logo" width="160">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                SERVICES
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="./Carpet-cleaning.html">CARPET CLEANING</a></li>
+                                <li><a class="dropdown-item" href="./Commercial-cleaning.html">COMMERCIAL CLEANING</a>
+                                </li>
+                                <li><a class="dropdown-item" href="./Domestic-cleaning.html">DOMESTIC CLEANING</a></li>
+                                <li><a class="dropdown-item" href="./EndofTenancy-Cleaning.html">END OF TENANCY
+                                        CLEANING</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./book-cleaner.html">BOOK A CLEANER</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="mt-4">
+            <div class="container d-flex justify-content-around">
+                <div class="content">
+                    <h1 style="font-size: 35px;">One-off or Regular Domestic Cleaning Service in Birmingham</h1>
+                    <p>
+                        Are you interested in optimizing your home environment into a perfect retreat? Choose the
+                        top-rated domestic cleaning service in Birmingham to achieve a fresh, heavenly home. Our highly
+                        professional team of residential cleaners is here for you. Through a diligent approach to
+                        housekeeping, we ensure that all areas of the property are maintained to the highest standards
+                        of cleanliness.
+                    </p>
+                    <p>
+                        As a leading provider of home cleaning services in Birmingham, we take great pride in ensuring
+                        each client receives customized solutions meeting their unique requirements. We offer a
+                        comprehensive range of cleaning services to meet all of your needs.
+                    </p>
+                    <p>
+                        From routine home maintenance to <a href="./Carpet-cleaning.html"
+                            class="text-decoration-none">carpet clean</a> and mold cleanup, our team can handle any
+                        task.
+                        Whether you require an extensive one-time deep clean or rely on us for private cleaning services
+                        and upkeep, our dedicated professionals are available to assist.
+                    </p>
+                    <p>
+                        Experience the quality service provided by our <strong>housekeeping</strong> staff and see why
+                        we are the preferred solution of <strong>domestic cleaning companies</strong> in the area of
+                        Birmingham. Contact us for a customized proposal and discover our competitive <strong>home
+                            cleaning rates</strong>.
+                    </p>
+                    <ul>
+                        <li>✔ Oven and microwave cleaning</li>
+                        <li>✔ Taps cleaning and descaling</li>
+                        <li>✔ Freezer defrosting and cleaning</li>
+                        <li>✔ Under/over furniture cleaning</li>
+                        <li>✔ Toilet and bath tub cleaning</li>
+                        <li>✔ Door cleaning</li>
+                    </ul>
+                    <a href="#" class="button">Book Now</a>
+                </div>
+                <div class="image">
+                    <img src="https://forefrontclean.co.uk/wp-content/uploads/2022/06/shutterstock_736138987-1024x717.webp"
+                        alt="Cleaning service in Birmingham">
+                </div>
+            </div>
+        </section>
+
+        <section class="pt-5 pb-5">
+            <h2 class="d-flex justify-content-center" style="text-align: center;">Why choose us for your commercial
+                cleaning needs?</h2>
+            <div style="padding-top: 50px;" class="d-flex justify-content-around m-3 heading-icons">
+                <div>
+                    <div class="text-center">
+                        <div class="icon"><span class="fas fa-handshake"></span></div>
+                        <h4>Trusted staff</h4>
+                    </div>
+                    <div class="text-center">All our cleaners have previous <br> experience
+                        and have passed <br> necessary checks.</div>
+                </div>
+                <div>
+                    <div class="text-center">
+                        <div class="icon"><span class="bi bi-calendar-check"></span></div>
+                        <h4>Flexible slots</h4>
+                    </div>
+                    <div class="text-center">Choose the most suitable time <br> for you, and we will make sure <br>
+                        to accommodate it.</div>
+                </div>
+                <div>
+                    <div class="text-center">
+                        <div class="icon"><span class="fa fa-star"></span></div>
+                        <h4>Quality service</h4>
+                    </div>
+                    <div class="text-center">We use professional equipment <br> and eco-friendly cleaning <br> solutions
+                        to achieve the best results.</div>
+                </div>
+                <div>
+                    <div class="text-center">
+                        <div class="icon"><span class="fas fa-money-bill-wave"></span></div>
+                        <h4>Competitive rates</h4>
+                    </div>
+                    <div class="text-center">Get excellent value for your <br> money with our affordable <br> prices.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pt-5 pb-5">
+            <div class="container">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                What areas do you cover?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We cover Birmingham and the surrounding areas. If you are unsure whether we cover your
+                                location, please contact us for more information.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                How can I book a cleaning service?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                You can book a cleaning service by filling out the booking form on our website or by
+                                calling us directly. We will then confirm your appointment and provide further details.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                What happens if I need to reschedule?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                If you need to reschedule, please contact us as soon as possible. We will do our best to
+                                accommodate your new preferred time slot, subject to availability.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+        <p class="fs-5">&copy; 2024 Forefront All Cleaning. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

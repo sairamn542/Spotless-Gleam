@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End of Tenancy Cleaning</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        body {
+            margin: 0;
+            padding-top: 70px;
+        }
+
+        .navbar-nav .nav-link {
+            margin-left: 15px;
+        }
+
+        .content {
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff0066;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background-color: #cc0052;
+        }
+
+        .image {
+            flex-basis: 50%;
+            text-align: right;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: 600px;
+            border-radius: 5px;
+        }
+
+        .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .heading-icons .icon {
+            color: #ff0066;
+        }
+
+        @media only screen and (max-width: 600px) {
+            body {
+                font-size: 14px;
+            }
+
+            .container {
+                padding: 10px;
+                box-shadow: none;
+            }
+
+            header {
+                box-shadow: none;
+            }
+
+            .navbar {
+                padding: 8px 10px;
+            }
+
+            .navbar-nav .nav-link {
+                margin-left: 10px;
+            }
+
+            .content {
+                max-width: 100%;
+                padding: 10px;
+            }
+
+            .image {
+                text-align: center;
+                flex-basis: 100%;
+                margin-top: 20px;
+            }
+
+            .image img {
+                width: 100%;
+                height: auto;
+            }
+
+            .heading-icons {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .heading-icons .icon {
+                font-size: 30px;
+                color: #ff0066;
+            }
+
+            .accordion-button {
+                font-size: 16px;
+            }
+
+            .accordion-body {
+                padding: 15px;
+            }
+
+            footer {
+                padding: 10px;
+            }
+
+            footer .fs-5 {
+                font-size: 14px;
+            }
+
+            .image {
+                order: 2;
+                margin-top: 20px;
+            }
+        }
+
+        section {
+            padding: 20px 0;
+        }
+
+        .pt-5 {
+            padding-top: 40px;
+        }
+
+        .pb-5 {
+            padding-bottom: 40px;
+        }
+
+        .accordion-button {
+            border-radius: 0;
+        }
+
+        .accordion-body {
+            padding: 20px;
+            margin: 30px;
+        }
+
+        footer {
+            background-color: #e9ecef;
+            padding: 15px;
+            text-align: center;
+        }
+
+        footer .fs-5 {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./for_front.html">
+                    <img src="https://forefrontclean.co.uk/wp-content/uploads/2022/05/Logo-02.svg"
+                        alt="Forefront All Cleaning Logo" width="160">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                SERVICES
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="./Carpet-cleaning.html">CARPET CLEANING</a></li>
+                                <li><a class="dropdown-item" href="./Commercial-cleaning.html">COMMERCIAL CLEANING</a>
+                                </li>
+                                <li><a class="dropdown-item" href="./Domestic-cleaning.html">DOMESTIC CLEANING</a></li>
+                                <li><a class="dropdown-item" href="./EndofTenancy-Cleaning.html">END OF TENANCY
+                                        CLEANING</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./book-cleaner.html">BOOK A CLEANER</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="mt-4">
+            <div class="container d-flex justify-content-around">
+                <div class="content">
+                    <h1 style="font-size: 35px;">End of Tenancy Cleaning Service in Birmingham</h1>
+                    <p>
+                        Moving out? Ensure your property is left spotless with our professional end of tenancy cleaning
+                        service in Birmingham. Our experienced team is dedicated to delivering a thorough clean that
+                        meets the highest standards, helping you secure your deposit and leave your old home in pristine
+                        condition.
+                    </p>
+                    <p>
+                        Our end of tenancy cleaning includes a detailed clean of all areas, from the kitchen and bathroom
+                        to living areas and bedrooms. We use high-quality cleaning products and equipment to ensure every
+                        corner is thoroughly cleaned.
+                    </p>
+                    <p>
+                        We understand the importance of a thorough clean for end of tenancy inspections and are here to
+                        provide a service that meets all your needs. Contact us today for a customized quote and
+                        experience our reliable and efficient cleaning service.
+                    </p>
+                    <p>
+                        Our comprehensive end of tenancy cleaning service includes:
+                    </p>
+                    <ul>
+                        <li>✔ Deep clean of kitchen appliances</li>
+                        <li>✔ Bathroom and toilet sanitization</li>
+                        <li>✔ Carpet and floor cleaning</li>
+                        <li>✔ Dusting and vacuuming of all rooms</li>
+                        <li>✔ Window cleaning</li>
+                        <li>✔ Trash removal</li>
+                    </ul>
+                    <a href="#" class="button">Book Now</a>
+                </div>
+                <div class="image">
+                    <img src="https://forefrontclean.co.uk/wp-content/uploads/2022/06/shutterstock_736138987-1024x717.webp"
+                        alt="End of Tenancy Cleaning Service">
+                </div>
+            </div>
+        </section>
+
+        <section class="pt-5 pb-5">
+            <h2 class="d-flex justify-content-center" style="text-align: center;">Why choose us for your end of tenancy
+                cleaning needs?</h2>
+            <div style="padding-top: 50px;" class="d-flex justify-content-around m-3 heading-icons">
+                <div>
+                    <div class="text-center">
+                        <div class="icon"><span class="fas fa-handshake"></span></div>
+                        <h4>Trusted staff</h4>
+                    </div>
+                    <div class="text-center">Our team is trained, experienced, and vetted to ensure the highest level of
+                        trust.</div>
+                </div>
+                <div>
+                    <div class="text-center">
+                        <div class="icon"><span class="bi bi-calendar-check"></span></div>
+                        <h4>Flexible slots</h4>
+                    </div>
+                    <div class="text-center">We offer flexible scheduling to accommodate your moving timeline.</div>
+                </div>
+                <div>
+                    <div class="text-center">
+                        <div class="icon"><span class="fas fa-star"></span></div>
+                        <h4>Competitive rates</h4>
+                    </div>
+                    <div class="text-center">Get high-quality cleaning at competitive rates.</div>
+                </div>
+                <div>
+                    <div class="text-center">
+                        <div class="icon"><span class="fas fa-money-bill-wave"></span></div>
+                        <h4>Free Quotion</h4>
+                    </div>
+                    <div class="text-center">Fill in the contact form or call us on the phone for a free quote.</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="m-5">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What is included in the end of tenancy cleaning service?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Our end of tenancy cleaning service covers all areas of your property, including the kitchen,
+                            bathrooms, living areas, bedrooms, and hallways. We also clean appliances, windows, and floors.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            How long does the cleaning take?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            The time required for end of tenancy cleaning depends on the size of the property and its
+                            condition. Typically, it takes between 3 to 6 hours.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Are the cleaning products provided?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Yes, we provide all the necessary cleaning products and equipment.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="fs-5">© 2024 Forefront Cleaning. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
