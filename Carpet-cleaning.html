@@ -4,18 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carpet-cleaning</title>
+    <title>Carpet Cleaning</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        
-        .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        body {
+            margin: 0;
+            padding-top: 70px;
+        }
+
+        .navbar-nav .nav-link {
+            margin-left: 15px;
         }
 
         .content {
@@ -25,10 +35,11 @@
         h1 {
             color: #333;
             font-size: 2rem;
+            margin-bottom: 20px;
         }
 
         p {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         ul {
@@ -38,10 +49,10 @@
         }
 
         ul li {
-            margin-bottom: 5px;
+            margin-bottom: 10px;
+            font-weight: bold;
         }
 
-        
         .button {
             display: inline-block;
             padding: 10px 20px;
@@ -49,6 +60,7 @@
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
+            margin-top: 10px;
         }
 
         .button:hover {
@@ -62,55 +74,202 @@
 
         .image img {
             max-width: 100%;
-            height: auto;
+            height: 600px;
             border-radius: 5px;
         }
 
         .icon {
             font-size: 40px;
+            margin-bottom: 10px;
         }
-        @media (min-width: 768px) {
-            .container {
-                flex-direction: row;
-                align-items: center;
+
+        .heading-icons .icon {
+            color: #ff0066;
+        }
+
+        @media only screen and (max-width: 600px) {
+            body {
+                font-size: 14px;
             }
 
-            .image {
-                flex-basis: 50%;
+            .container {
+                padding: 10px;
+                box-shadow: none;
+            }
+
+            header {
+                box-shadow: none;
+            }
+
+            .navbar {
+                padding: 8px 10px;
+            }
+
+            .navbar-nav .nav-link {
+                margin-left: 10px;
             }
 
             .content {
-                flex-basis: 50%;
+                max-width: 100%;
+                padding: 10px;
             }
+
+            .image {
+                text-align: center;
+                flex-basis: 100%;
+                margin-top: 20px;
+            }
+
+            .image img {
+                width: 100%;
+                height: auto;
+            }
+
+            .heading-icons {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .heading-icons .icon {
+                font-size: 30px;
+            }
+
+            .accordion-button {
+                font-size: 16px;
+            }
+
+            .accordion-body {
+                padding: 15px;
+            }
+
+            footer {
+                padding: 10px;
+            }
+
+            footer .fs-5 {
+                font-size: 14px;
+            }
+
+            .image {
+                order: 2;
+                margin-top: 20px;
+            }
+            .section2 {
+                margin: 14px;
+            }
+        }
+
+        section {
+            padding: 20px 0;
+        }
+
+        .pt-5 {
+            padding-top: 40px;
+        }
+
+        .pb-5 {
+            padding-bottom: 40px;
+        }
+
+        .accordion-button {
+            border-radius: 0;
+        }
+
+        .accordion-body {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #e9ecef;
+            padding: 15px;
+            text-align: center;
+        }
+
+        footer .fs-5 {
+            margin: 0;
+        }
+
+        .link-btn {
+            position: relative;
+            width: 192px;
+            height: 56px;
+            background-color: white;
+            border-radius: 32px;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .link-btn div {
+            position: absolute;
+            height: 48px;
+            width: 25%;
+            background-color: #4caf50;
+            border-radius: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 4px;
+            left: 4px;
+            transition: width 0.5s ease;
+            z-index: 10;
+        }
+
+        .link-btn:hover div {
+            width: 184px;
+        }
+
+        .link-btn i {
+            font-size: 24px;
+            color: black;
+        }
+
+        .link-btn p {
+            position: relative;
+            z-index: 1;
+            margin-left: 18px;
+            transition: 0.3s ease;
+            margin-top: 5px;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light p-4">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="./for_front.html">
-                    <img src="https://forefrontclean.co.uk/wp-content/uploads/2022/05/Logo-02.svg" alt="Forefront All Cleaning Logo" width="180px">
+                    <img src="https://forefrontclean.co.uk/wp-content/uploads/2022/05/Logo-02.svg"
+                        alt="Forefront All Cleaning Logo" width="160">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                       
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                SERVICES 
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                SERVICES
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="./Carpet-cleaning.html">CARPET CLEANING</a></li>
-                                <li><a class="dropdown-item" href="./Commercial-cleaning.html">COMMERCIAL CLEANING</a></li>
+                                <li><a class="dropdown-item" href="./Commercial-cleaning.html">COMMERCIAL CLEANING</a>
+                                </li>
                                 <li><a class="dropdown-item" href="./Domestic-cleaning.html">DOMESTIC CLEANING</a></li>
-                                <li><a class="dropdown-item" href="./EndofTenancy-Cleaning.html">END OF TENANCY CLEANING</a></li>
+                                <li><a class="dropdown-item" href="./EndofTenancy-Cleaning.html">END OF TENANCY
+                                        CLEANING</a></li>
                             </ul>
                         </li>
-                        
                         <li class="nav-item">
                             <a class="nav-link" href="./book-cleaner.html">BOOK A CLEANER</a>
                         </li>
@@ -123,111 +282,138 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section class="mt-4">
             <div class="container d-flex justify-content-around">
                 <div class="content">
                     <h1>Professional Carpet Cleaning Service in Birmingham</h1>
                     <p>
-                        For immaculate house carpet cleaning service in Birmingham, look no further than our team of
-                        professional carpet cleaners. Specializing in deep cleaning carpets, we employ state-of-the-art
-                        steam cleaning methods to ensure a thorough and effective service. Our local carpet cleaners are
-                        dedicated to revitalizing your home’s carpets, leaving them fresh, sanitized, and looking like
-                        new. Trust us for all your <a href="./Domestic-cleaning.html" class="text-decoration-none">domestic cleaning</a> needs, and experience the difference of our expert
-                        touch.
+                        Is your carpet in need of a deep clean? Our top-rated carpet cleaning service in Birmingham
+                        provides professional solutions to rejuvenate your carpets. Our experienced team uses advanced
+                        equipment and eco-friendly products to ensure your carpets look and feel like new.
                     </p>
-
+                    <p>
+                        We specialize in removing stains, odors, and dirt from all types of carpets, offering both
+                        one-off and regular cleaning services. Whether you need a quick refresh or a thorough deep
+                        clean, we have the expertise to deliver outstanding results.
+                    </p>
+                    <p>
+                        From high-traffic areas to delicate fabrics, our dedicated team ensures a thorough clean,
+                        leaving your carpets fresh and vibrant. Contact us today to schedule a cleaning or request a
+                        personalized quote.
+                    </p>
                     <ul>
-                        <li>✔ We use high quality equipment</li>
-                        <li>✔ Leave your carpets looking and smelling brand new</li>
-                        <li>✔ Any carpet size and thickness</li>
+                        <li>✔ Deep stain removal</li>
+                        <li>✔ Odor elimination</li>
+                        <li>✔ High-traffic area treatment</li>
+                        <li>✔ Fabric protection options</li>
+                        <li>✔ Eco-friendly cleaning products</li>
                     </ul>
-                    <a href="#" class="button">Book Now</a>
+                    <a href="./book-cleaner.html" class="button">Book Now</a>
                 </div>
                 <div class="image">
                     <img src="https://forefrontclean.co.uk/wp-content/uploads/2022/06/shutterstock_1079107034-1.webp"
-                        alt="Cleaning service in Birmingham">
+                        alt="Carpet cleaning service in Birmingham">
                 </div>
             </div>
         </section>
 
-        <section style="padding-top: 50px;">
-            <h2 class="d-flex justify-content-center">Why choose us for your commercial cleaning needs?</h2>
-            <div style="padding-top: 50px;" class=" d-flex justify-content-around m-3">
+        <section class="pt-5 pb-5 section2">
+            <h2 class="d-flex justify-content-center">Why choose us for your carpet cleaning needs?</h2>
+            <div class="d-flex justify-content-around m-3 heading-icons">
                 <div>
                     <div class="text-center">
-                        <div class="icon"><span class="fas fa-handshake"></span></div>
-                        <h4>Trusted staff</h4>
-                        <label class="align-items-center fs-2 text-dark-emphasis">.........</label>
+                        <div class="icon"><span class="fas fa-check-circle"></span></div>
+                        <h4>Experienced Cleaners</h4>
                     </div>
-                    <div class="text-center">All our cleaners have previous <br> experience
-                        and have passed <br> necessary checks.</div>
+                    <div class="text-center">Our team is trained to handle all types of carpets and stains.</div>
                 </div>
                 <div>
                     <div class="text-center">
-                        <div class="icon"><span class="bi bi-calendar-check"></span></div>
-                        <h4>Flexible slots</h4>
-                        <label class="align-items-center fs-2 text-dark-emphasis">.........</label>
+                        <div class="icon"><span class="bi bi-clock"></span></div>
+                        <h4>Fast & Efficient</h4>
                     </div>
-                    <div class="text-center">Including late nights, weekends <br> and bank holidays</div>
+                    <div class="text-center">We ensure your carpets are cleaned quickly with minimal disruption.</div>
                 </div>
                 <div>
                     <div class="text-center">
-                        <div class="icon"><span class="fas fa-coins"></span></div>
-                        <h4>Flat hourly rates</h4>
-                        <label class="align-items-center fs-2 text-dark-emphasis">.........</label>
+                        <div class="icon"><span class="fa fa-thumbs-up"></span></div>
+                        <h4>High Satisfaction</h4>
                     </div>
-                    <div class="text-center"> No surprise charges - what we <br> quote is what you'll pay.</div>
+                    <div class="text-center">Our clients consistently praise our thorough and reliable service.</div>
                 </div>
                 <div>
                     <div class="text-center">
-                        <div class="icon"><span class="fab fa-wpforms "></span></div>
-                        <h4>Free quotation</h4>
-                        <label class="align-items-center fs-2 text-dark-emphasis">.........</label>
+                        <div class="icon"><span class="fas fa-dollar-sign"></span></div>
+                        <h4>Affordable Pricing</h4>
                     </div>
-                    <div class="text-center">Fill in the contact form or call us <br> on the phone for a free quote.
-                    </div>
+                    <div class="text-center">We offer competitive rates without compromising on quality.</div>
                 </div>
             </div>
         </section>
 
-        <section class="pt-5 pb-5">
-            <h1>Frequently Asked Questions</h1>
-            <div class="accordion accordion-flush" id="accordionFlushExample">
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                      What does the cleaning service include?
-                    </button>
-                  </h2>
-                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Our cleaners will follow a list of priorities arranged that will be arranged with you when you make a booking. In case your business has any special cleaning needs, make sure you mention it before the service is booked.</div>
-                  </div>
+        <section class="pb-5">
+            <div class="container">
+                <h2 class="d-flex justify-content-center">Frequently Asked Questions</h2>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                How often should I get my carpets cleaned?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                It depends on the level of foot traffic and whether you have pets or allergies.
+                                Generally, carpets should be cleaned every 6 to 12 months.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Do you use eco-friendly cleaning products?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, we use eco-friendly cleaning products that are safe for children and pets while
+                                still being effective on stains and dirt.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                How long does it take for the carpets to dry?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Carpets typically dry within 6 to 12 hours depending on the ventilation and humidity in
+                                the room.
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        Do I need to provide the cleaning products?
-                    </button>
-                  </h2>
-                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">If you need specific cleaning products or materials, please let us know in your booking so that your cleaner can bring them with them for a small fee. Please note that you will need to supply your own cleaning equipment (including a vacuum, mop, and bucket), as cleaners typically travel by public transportation.</div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                        Is there a contract?
-                    </button>
-                  </h2>
-                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">There is no contract – if you‘re not happy with the cleaning service and want to cancel, just let us know with 24 hours notice. You can also reschedule appointments by calling us on 07943 272 519.</div>
-                  </div>
-                </div>
-              </div>
+            </div>
         </section>
     </main>
-    <footer class="d-flex justify-content-center bg-primary-subtle p-2">
-        <div class=" fs-5">© 2024 Forefront All Cleaning Ltd | Designed and developed by Haptech</div>
+    <a href="index.html" class="link-btn">
+        <div>
+            <i class="fas fa-arrow-left"></i>
+        </div>
+        <p>Go Back To Home</p>
+    </a>
+    <footer>
+        <div class="container">
+            <p class="fs-5 mb-0">© 2024 Forefront All Cleaning Ltd | Designed and developed by Sairam.</p>
+        </div>
     </footer>
 </body>
 

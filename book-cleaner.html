@@ -8,16 +8,27 @@
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
     <style>
-        
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
 
         h2 {
             color: #007bff;
             margin-bottom: 10px;
+            text-align: center;
         }
 
         p {
             margin: 10px 0;
+            text-align: center;
         }
 
         a {
@@ -25,21 +36,45 @@
             text-decoration: none;
         }
 
-        .form-group {
-            margin-bottom: 15px;
+        .form-container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        textarea,
-        select {
+        .form-group {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
             padding: 10px;
-            margin: 5px 0 15px 0;
             border: 1px solid #ced4da;
             border-radius: 4px;
             box-sizing: border-box;
             font-size: 16px;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .form-group input {
+            display: inline-block;
+            width: 48.5%;
+            margin: 0 1%;
+        }
+
+        .form-group input:first-of-type {
+            margin-left: 0;
+        }
+
+        .form-group input:last-of-type {
+            margin-right: 0;
+        }
+
+        section {
+            margin-top: 130px;
         }
 
         textarea {
@@ -55,39 +90,180 @@
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
+            display: block;
+            margin: 0 auto;
+            width: 50%;
         }
 
         button[type="submit"]:hover {
             background-color: #0056b3;
         }
+
+        .iti {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        footer {
+            background-color: #e9ecef;
+            padding: 15px;
+            text-align: center;
+        }
+
+        footer .fs-5 {
+            margin: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .link-btn {
+            position: relative;
+            width: 192px;
+            height: 56px;
+            background-color: white;
+            border-radius: 32px;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .link-btn div {
+            position: absolute;
+            height: 48px;
+            width: 25%;
+            background-color: #4caf50;
+            border-radius: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 4px;
+            left: 4px;
+            transition: width 0.5s ease;
+            z-index: 10;
+        }
+
+        .link-btn:hover div {
+            width: 184px;
+        }
+
+        .link-btn i {
+            font-size: 24px;
+            color: black;
+        }
+
+        .link-btn p {
+            position: relative;
+            z-index: 1;
+            margin-left: 18px;
+            transition: 0.3s ease;
+            margin-top: 5px;
+        }
+        @media (max-width: 600px) {
+    header {
+        padding: 0 10px; /* Add padding to prevent content from touching the edges */
+    }
+
+    .navbar-brand img {
+        width: 120px; /* Resize logo for smaller screens */
+    }
+
+    .form-container {
+        padding: 10px; /* Reduce padding inside the form container */
+        margin: 0 10px; /* Add margin to prevent content from touching the edges */
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 14px; /* Reduce font size for input fields */
+    }
+
+    .form-group input {
+        width: 100%; /* Full width for input fields */
+        margin: 0 0 10px 0; /* Add margin below the input fields */
+    }
+
+    .form-group input:first-of-type {
+        margin-left: 0;
+    }
+
+    .form-group input:last-of-type {
+        margin-right: 0;
+    }
+
+    textarea {
+        height: auto; /* Allow textarea to resize vertically based on content */
+    }
+
+    button[type="submit"] {
+        width: 100%; /* Full width for the submit button */
+        padding: 15px; /* Increase padding for easier clicking */
+    }
+
+    .link-btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+        width: 60%;
+    }
+
+    .link-btn i {
+        font-size: 20px;
+    }
+
+    .link-btn p {
+        font-size: 0.9rem;
+        margin-left: 10px;
+    }
+    footer {
+        padding: 10px; /* Reduce padding in the footer */
+    }
+
+    footer .fs-5 {
+        font-size: 0.875rem; /* Reduce font size in the footer */
+    }
+}
     </style>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light p-4">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="./for_front.html">
-                    <img src="https://forefrontclean.co.uk/wp-content/uploads/2022/05/Logo-02.svg" alt="Forefront All Cleaning Logo" width="180px">
+                    <img src="https://forefrontclean.co.uk/wp-content/uploads/2022/05/Logo-02.svg"
+                        alt="Forefront All Cleaning Logo" width="180px">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                       
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                SERVICES 
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                SERVICES
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="./Carpet-cleaning.html">CARPET CLEANING</a></li>
-                                <li><a class="dropdown-item" href="./Commercial-cleaning.html">COMMERCIAL CLEANING</a></li>
+                                <li><a class="dropdown-item" href="./Commercial-cleaning.html">COMMERCIAL CLEANING</a>
+                                </li>
                                 <li><a class="dropdown-item" href="./Domestic-cleaning.html">DOMESTIC CLEANING</a></li>
-                                <li><a class="dropdown-item" href="./EndofTenancy-Cleaning.html">END OF TENANCY CLEANING</a></li>
+                                <li><a class="dropdown-item" href="./EndofTenancy-Cleaning.html">END OF TENANCY
+                                        CLEANING</a></li>
                             </ul>
                         </li>
-                        
                         <li class="nav-item">
                             <a class="nav-link" href="./book-cleaner.html">BOOK A CLEANER</a>
                         </li>
@@ -98,52 +274,83 @@
                 </div>
             </div>
         </nav>
-    </header>
+    </header>   
     <main>
-        <section class=" pb-5">
+        <section class="pb-5">
             <div class="form-container">
-                <div class="container-fluid">
-                    <h2>Book Our Cleaning Services Now!</h2>
-                    <p style="word-break: keep-all;">Please use the form below to enter details about your property and
-                        receive a quote for cleaning
-                        services. We will get back to you within one hour Monday to Saturday from 9 am to 6 pm.</p>
-                    <p>Having trouble with the form? You can also Wapp us on <a href="https://wa.me/447943272519" target="_blank">07943 272 519</a>
-                        to
-                        discuss your cleaning needs.</p>
-                </div>
+                <h2>Book Our Cleaning Services Now!</h2>
+                <p style="word-break: keep-all;">Please use the form below to enter details about your property and
+                    receive a quote for cleaning services. We will get back to you within one hour Monday to Saturday
+                    from 9 am to 6 pm.</p>
+                <p>Having trouble with the form? You can also Wapp us at <a href="https://wa.me/447943272519"
+                        target="_selt" style="font-size: 1.5rem;"><span class="bi bi-whatsapp text-success"></span></a>
+                    to discuss your cleaning needs.</p>
 
-                <form class="pt-5 container-fluid text-center">
+                <form class="pt-5">
                     <div class="form-group">
-                        <input style="width: 40%;" type="text" placeholder="Full Name" id="full-name" required> <input style="width: 40%;" type="tel"
-                            placeholder="Telephone Number" id="phone" required>
+                        <input type="text" placeholder="First Name" id="first-name" required>
+                        <input type="text" placeholder="Last Name" id="last-name" required>
                     </div>
                     <div class="form-group">
-                        <input style="width: 40%;" type="email" placeholder="Email Address" id="email" required> <input style="width: 40%;" type="text"
-                            placeholder="Postal Code" id="postal-code" required>
+                        <input type="tel" placeholder="Telephone Number" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" id="email" required>
+                        <input type="text" placeholder="Postal Code" id="postal-code" required>
                     </div>
 
-                    <div class="form-group " >
-                        <select  style="width: 80%;" id="enquiry-type" name="enquiry-type"  required>
+                    <div class="form-group">
+                        <select id="enquiry-type" name="enquiry-type" required>
                             <option value="weekly">Having Weekly Cleaner</option>
                             <option value="fortnightly">Having a Fortnightly Cleaner</option>
-                            <option  value="one-off">Having a One Off Clean</option>
+                            <option value="one-off">Having a One Off Clean</option>
                             <option value="existing-client">I'm an Existing Client</option>
                             <option value="looking-for-services">Looking For Cleaning Services?</option>
                         </select>
                     </div>
-                    <div class="form-group ">
-
-                        <textarea style="width: 80%;" id="message" placeholder="Message (optional)" name="message"></textarea>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Message (optional)" name="message"></textarea>
                     </div>
-                    <button type="submit" style="display: block; margin-left: 150px;">Submit</button>
+                    <button type="submit">Submit</button>
                 </form>
             </div>
-
         </section>
     </main>
-    <footer class="d-flex justify-content-center bg-primary-subtle p-2 ">
-        <div class=" fs-5 ">© 2024 Forefront All Cleaning Ltd | Designed and developed by Haptech</div>
+    <a href="index.html" class="link-btn">
+        <div>
+            <i class="fas fa-arrow-left"></i>
+        </div>
+        <p>Go Back To Home</p>
+    </a>
+    <footer class="d-flex justify-content-center p-2">
+        <div class="fs-5">© 2024 Forefront All Cleaning Ltd | Designed and developed by Sairam</div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var input = document.querySelector("#phone");
+            var iti = window.intlTelInput(input, {
+                initialCountry: "gb", // default country code (UK)
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.min.js", // for formatting/validation
+                separateDialCode: true // Show the country code in the input
+            });
+
+            // Function to update the flag based on the typed country code
+            input.addEventListener("input", function () {
+                var dialCode = input.value.replace(/\D/g, ''); // Get numeric input (country code)
+
+                // Iterate through all countries and match the dial code
+                iti.getCountryData().forEach(function (country) {
+                    if (dialCode.startsWith(country.dialCode)) {
+                        iti.setCountry(country.iso2); // Set the flag for the corresponding country
+                    }
+                });
+            });
+
+            input.style.width = "100%";
+        });
+    </script>
 </body>
 
 </html>

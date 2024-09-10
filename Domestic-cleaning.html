@@ -57,6 +57,7 @@
 
         ul li {
             margin-bottom: 10px;
+            font-weight: bold;
         }
 
         .button {
@@ -123,27 +124,27 @@
                 /* Reduce margin between nav links */
             }
 
-            .content {
-                max-width: 100%;
-                /* Full width for content */
-                padding: 10px;
-                /* Reduce padding */
+            .container {
+                display: flex;
+                flex-direction: column;
+                /* Stack content and image vertically */
+                align-items: center;
+            }
+            
+            ul li {
+                text-align: left;
+                margin-bottom: 10px;
+                font-weight: bold;
+                padding-left: 20px;
             }
 
+            .content,
             .image {
-                text-align: center;
-                /* Center image for smaller screens */
-                flex-basis: 100%;
-                /* Full width */
-                margin-top: 20px;
-                /* Add margin for spacing */
-            }
-
-            .image img {
                 width: 100%;
-                /* Full width */
-                height: auto;
-                /* Adjust height for aspect ratio */
+                /* Full width on mobile */
+                text-align: center;
+                /* Center the text and image */
+                height: 10%;
             }
 
             .heading-icons {
@@ -185,13 +186,60 @@
 
             .image {
                 order: 2;
-                /* Move the image below the content */
                 margin-top: 20px;
-                /* Space between content and image */
             }
         }
 
+        .link-btn {
+            position: relative;
+            width: 192px;
+            height: 56px;
+            background-color: white;
+            border-radius: 32px;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s ease;
+            margin-left: 10px;
+        }
 
+        .link-btn div {
+            position: absolute;
+            height: 48px;
+            width: 25%;
+            background-color: #4caf50;
+            border-radius: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 4px;
+            left: 4px;
+            transition: width 0.5s ease;
+            z-index: 10;
+        }
+
+        .link-btn:hover div {
+            width: 184px;
+        }
+
+        .link-btn i {
+            font-size: 24px;
+            color: black;
+        }
+
+        .link-btn p {
+            position: relative;
+            z-index: 1;
+            margin-left: 18px;
+            transition: 0.3s ease;
+            margin-top: 5px;
+        }
 
         section {
             padding: 20px 0;
@@ -402,10 +450,15 @@
             </div>
         </section>
     </main>
-
+    <a href="index.html" class="link-btn">
+        <div>
+            <i class="fas fa-arrow-left"></i>
+        </div>
+        <p>Go Back To Home</p>
+    </a>
     <footer>
 
-        <p class="fs-5">&copy; 2024 Forefront All Cleaning. All Rights Reserved.</p>
+        <p class="fs-5">© 2024 Forefront All Cleaning Ltd | Designed and developed by Sairam</p>
     </footer>
 </body>
 

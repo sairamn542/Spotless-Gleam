@@ -50,6 +50,7 @@
 
         ul li {
             margin-bottom: 10px;
+            font-weight: bold;
         }
 
         .button {
@@ -91,6 +92,14 @@
                 font-size: 14px;
             }
 
+
+            ul li {
+                text-align: left;
+                margin-bottom: 10px;
+                font-weight: bold;
+                padding-left: 20px;
+            }
+
             .container {
                 padding: 10px;
                 box-shadow: none;
@@ -108,20 +117,19 @@
                 margin-left: 10px;
             }
 
-            .content {
-                max-width: 100%;
-                padding: 10px;
+            .container {
+                display: flex;
+                flex-direction: column;
+                /* Stack content and image vertically */
+                align-items: center;
             }
 
+            .content,
             .image {
-                text-align: center;
-                flex-basis: 100%;
-                margin-top: 20px;
-            }
-
-            .image img {
                 width: 100%;
-                height: auto;
+                /* Full width on mobile */
+                text-align: center;
+                /* Center the text and image */
             }
 
             .heading-icons {
@@ -186,6 +194,57 @@
         footer .fs-5 {
             margin: 0;
         }
+
+        .link-btn {
+            position: relative;
+            width: 192px;
+            height: 56px;
+            background-color: white;
+            border-radius: 32px;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .link-btn div {
+            position: absolute;
+            height: 48px;
+            width: 25%;
+            background-color: #4caf50;
+            border-radius: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 4px;
+            left: 4px;
+            transition: width 0.5s ease;
+            z-index: 10;
+        }
+
+        .link-btn:hover div {
+            width: 184px;
+        }
+
+        .link-btn i {
+            font-size: 24px;
+            color: black;
+        }
+
+        .link-btn p {
+            position: relative;
+            z-index: 1;
+            margin-left: 18px;
+            transition: 0.3s ease;
+            margin-top: 5px;
+        }
     </style>
 </head>
 
@@ -240,8 +299,10 @@
                         condition.
                     </p>
                     <p>
-                        Our end of tenancy cleaning includes a detailed clean of all areas, from the kitchen and bathroom
-                        to living areas and bedrooms. We use high-quality cleaning products and equipment to ensure every
+                        Our end of tenancy cleaning includes a detailed clean of all areas, from the kitchen and
+                        bathroom
+                        to living areas and bedrooms. We use high-quality cleaning products and equipment to ensure
+                        every
                         corner is thoroughly cleaned.
                     </p>
                     <p>
@@ -263,7 +324,7 @@
                     <a href="#" class="button">Book Now</a>
                 </div>
                 <div class="image">
-                    <img src="https://forefrontclean.co.uk/wp-content/uploads/2022/06/shutterstock_736138987-1024x717.webp"
+                    <img src="https://forefrontclean.co.uk/wp-content/uploads/2022/06/shutterstock_564626980.webp"
                         alt="End of Tenancy Cleaning Service">
                 </div>
             </div>
@@ -305,7 +366,7 @@
             </div>
         </section>
 
-        <section class="m-5">
+        <section class="m-4">
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
@@ -317,8 +378,10 @@
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            Our end of tenancy cleaning service covers all areas of your property, including the kitchen,
-                            bathrooms, living areas, bedrooms, and hallways. We also clean appliances, windows, and floors.
+                            Our end of tenancy cleaning service covers all areas of your property, including the
+                            kitchen,
+                            bathrooms, living areas, bedrooms, and hallways. We also clean appliances, windows, and
+                            floors.
                         </div>
                     </div>
                 </div>
@@ -355,10 +418,16 @@
         </section>
 
     </main>
+    <a href="index.html" class="link-btn">
+        <div>
+            <i class="fas fa-arrow-left"></i>
+        </div>
+        <p>Go Back To Home</p>
+    </a>
 
     <footer>
         <div class="container">
-            <p class="fs-5">© 2024 Forefront Cleaning. All rights reserved.</p>
+            <p class="fs-5">© 2024 Forefront All Cleaning Ltd | Designed and developed by Sairam</p>
         </div>
     </footer>
 

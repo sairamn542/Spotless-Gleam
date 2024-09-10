@@ -58,6 +58,7 @@
 
         ul li {
             margin-bottom: 10px;
+            font-weight: bold;
         }
 
         .button {
@@ -169,6 +170,57 @@
             }
         }
 
+        .link-btn {
+            position: relative;
+            width: 192px;
+            height: 56px;
+            background-color: white;
+            border-radius: 32px;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .link-btn div {
+            position: absolute;
+            height: 48px;
+            width: 25%;
+            background-color: #4caf50;
+            border-radius: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 4px;
+            left: 4px;
+            transition: width 0.5s ease;
+            z-index: 10;
+        }
+
+        .link-btn:hover div {
+            width: 184px;
+        }
+
+        .link-btn i {
+            font-size: 24px;
+            color: black;
+        }
+
+        .link-btn p {
+            position: relative;
+            z-index: 1;
+            margin-left: 18px;
+            transition: 0.3s ease;
+            margin-top: 5px;
+        }
+
         section {
             padding: 20px 0;
         }
@@ -206,22 +258,27 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="./for_front.html">
-                    <img src="https://forefrontclean.co.uk/wp-content/uploads/2022/05/Logo-02.svg" alt="Forefront All Cleaning Logo" width="160">
+                    <img src="https://forefrontclean.co.uk/wp-content/uploads/2022/05/Logo-02.svg"
+                        alt="Forefront All Cleaning Logo" width="160">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 SERVICES
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="./Carpet-cleaning.html">CARPET CLEANING</a></li>
-                                <li><a class="dropdown-item" href="./Commercial-cleaning.html">COMMERCIAL CLEANING</a></li>
+                                <li><a class="dropdown-item" href="./Commercial-cleaning.html">COMMERCIAL CLEANING</a>
+                                </li>
                                 <li><a class="dropdown-item" href="./Domestic-cleaning.html">DOMESTIC CLEANING</a></li>
-                                <li><a class="dropdown-item" href="./EndofTenancy-Cleaning.html">END OF TENANCY CLEANING</a></li>
+                                <li><a class="dropdown-item" href="./EndofTenancy-Cleaning.html">END OF TENANCY
+                                        CLEANING</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -241,16 +298,24 @@
                 <div class="content">
                     <h1 style="font-size: 35px;">Professional Commercial Cleaning Services in Birmingham</h1>
                     <p>
-                        Enhance the productivity and appeal of your business environment with our top-rated commercial cleaning services in Birmingham. Our experienced team is dedicated to providing a pristine workspace that promotes a healthy and professional atmosphere.
+                        Enhance the productivity and appeal of your business environment with our top-rated commercial
+                        cleaning services in Birmingham. Our experienced team is dedicated to providing a pristine
+                        workspace that promotes a healthy and professional atmosphere.
                     </p>
                     <p>
-                        We offer tailored cleaning solutions designed to meet the unique requirements of commercial spaces. From office cleaning to specialized industrial cleaning, we have the expertise to ensure your premises are spotless and well-maintained.
+                        We offer tailored cleaning solutions designed to meet the unique requirements of commercial
+                        spaces. From office cleaning to specialized industrial cleaning, we have the expertise to ensure
+                        your premises are spotless and well-maintained.
                     </p>
                     <p>
-                        Whether you need regular cleaning or a one-time deep clean, our team uses the latest equipment and eco-friendly products to deliver exceptional results. Explore our range of services to find the perfect solution for your business needs.
+                        Whether you need regular cleaning or a one-time deep clean, our team uses the latest equipment
+                        and eco-friendly products to deliver exceptional results. Explore our range of services to find
+                        the perfect solution for your business needs.
                     </p>
                     <p>
-                        Discover why we are the preferred choice for <strong>commercial cleaning services</strong> in Birmingham. Contact us for a customized quote and learn about our competitive pricing and flexible service options.
+                        Discover why we are the preferred choice for <strong>commercial cleaning services</strong> in
+                        Birmingham. Contact us for a customized quote and learn about our competitive pricing and
+                        flexible service options.
                     </p>
                     <ul>
                         <li>✔ Office and workspace cleaning</li>
@@ -260,44 +325,50 @@
                         <li>✔ High-touch surface disinfection</li>
                         <li>✔ Waste management</li>
                     </ul>
-                    <a href="#" class="button">Request a Quote</a>
+                    <a href="./book-cleaner.html" class="button">Book now</a>
                 </div>
                 <div class="image">
-                    <img src="https://forefrontclean.co.uk/wp-content/uploads/2022/06/shutterstock_736138987-1024x717.webp" alt="Commercial cleaning service in Birmingham">
+                    <img src="https://forefrontclean.co.uk/wp-content/uploads/2022/06/shutterstock_1129251308.webp"
+                        alt="Commercial cleaning service in Birmingham">
                 </div>
             </div>
         </section>
 
         <section class="pt-5 pb-5">
-            <h2 class="d-flex justify-content-center" style="text-align: center;">Why Choose Us for Your Commercial Cleaning Needs?</h2>
+            <h2 class="d-flex justify-content-center" style="text-align: center;">Why Choose Us for Your Commercial
+                Cleaning Needs?</h2>
             <div style="padding-top: 50px;" class="d-flex justify-content-around m-3 heading-icons">
                 <div>
                     <div class="text-center">
                         <div class="icon"><span class="fas fa-handshake"></span></div>
                         <h4>Trusted Professionals</h4>
                     </div>
-                    <div class="text-center">Our team consists of vetted professionals with extensive experience in commercial cleaning.</div>
+                    <div class="text-center">Our team consists of vetted professionals with extensive experience in
+                        commercial cleaning.</div>
                 </div>
                 <div>
                     <div class="text-center">
                         <div class="icon"><span class="bi bi-calendar-check"></span></div>
                         <h4>Flexible Scheduling</h4>
                     </div>
-                    <div class="text-center">We offer flexible scheduling options to minimize disruption to your business operations.</div>
+                    <div class="text-center">We offer flexible scheduling options to minimize disruption to your
+                        business operations.</div>
                 </div>
                 <div>
                     <div class="text-center">
                         <div class="icon"><span class="fas fa-tools"></span></div>
                         <h4>State-of-the-Art Equipment</h4>
                     </div>
-                    <div class="text-center">We use the latest equipment and eco-friendly products to deliver top-quality cleaning.</div>
+                    <div class="text-center">We use the latest equipment and eco-friendly products to deliver
+                        top-quality cleaning.</div>
                 </div>
                 <div>
                     <div class="text-center">
                         <div class="icon"><span class="bi bi-shield-check"></span></div>
                         <h4>Comprehensive Services</h4>
                     </div>
-                    <div class="text-center">Our services cover all aspects of commercial cleaning, from routine maintenance to deep cleans.</div>
+                    <div class="text-center">Our services cover all aspects of commercial cleaning, from routine
+                        maintenance to deep cleans.</div>
                 </div>
             </div>
         </section>
@@ -307,45 +378,60 @@
             <div class="accordion" id="accordionFAQ">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             What is included in your commercial cleaning services?
                         </button>
                     </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionFAQ">
                         <div class="accordion-body">
-                            Our commercial cleaning services include office cleaning, carpet and floor care, restroom sanitation, window cleaning, and more. We tailor our services to meet your specific needs.
+                            Our commercial cleaning services include office cleaning, carpet and floor care, restroom
+                            sanitation, window cleaning, and more. We tailor our services to meet your specific needs.
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             How do I schedule a cleaning service?
                         </button>
                     </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionFAQ">
                         <div class="accordion-body">
-                            You can schedule a cleaning service by contacting us through our website or by phone. We will work with you to find a convenient time for your cleaning needs.
+                            You can schedule a cleaning service by contacting us through our website or by phone. We
+                            will work with you to find a convenient time for your cleaning needs.
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                             Are your cleaning products safe for the environment?
                         </button>
                     </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFAQ">
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionFAQ">
                         <div class="accordion-body">
-                            Yes, we use eco-friendly cleaning products that are safe for the environment and for the people in your workplace.
+                            Yes, we use eco-friendly cleaning products that are safe for the environment and for the
+                            people in your workplace.
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+    <a href="index.html" class="link-btn">
+        <div>
+            <i class="fas fa-arrow-left"></i>
+        </div>
+        <p>Go Back To Home</p>
+    </a>
     <footer>
-        <p class="fs-5">© 2024 Forefront Cleaning Services | All Rights Reserved</p>
+        <p class="fs-5">© 2024 Forefront All Cleaning Ltd | Designed and developed by Sairam</p>
     </footer>
 </body>
 

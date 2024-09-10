@@ -4,79 +4,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact</title>
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.min.js"></script>
     <style>
-        
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        ul li {
+            font-weight: bold;
+        }
+        .contact-section {
+            padding: 2rem;
+            background-color: #f8f9fa;
+        }
+
         .contact-section h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 1rem;
         }
 
         .contact-section p,
         .contact-section address {
-            margin-bottom: 10px;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: #495057;
         }
 
         .contact-form {
             display: flex;
             flex-direction: column;
+            gap: 1rem;
         }
 
-        .contact-form input,
+        .contact-form .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .contact-form .form-group input,
+        .contact-form .form-group textarea {
+            padding: 0.75rem;
+            font-size: 1rem;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+        }
+
+        .contact-form .form-group input {
+            width: 100%;
+        }
+
+        .contact-form .name-inputs {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .contact-form .name-inputs input {
+            width: calc(50% - 0.5rem);
+        }
+
         .contact-form textarea {
-            margin-bottom: 10px;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            resize: vertical;
         }
 
         .contact-form button {
-            padding: 10px;
-            background-color: #e30613;
-            
+            padding: 0.50rem;
+            background-color: #0671e3;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 0.25rem;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 1rem;
+            align-self: flex-start;
+            width: 100%;
         }
-        textarea {
-            height: 300px;
-            width: 500px;
-            resize: vertical;
+
+        .contact-form button:hover {
+            background-color: #425e92;
+        }
+
+        .iti {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        section {
+            margin-top: 110px;
+        }
+
+        footer {
+            background-color: #e9ecef;
+            padding: 15px;
+            text-align: center;
+        }
+
+        footer .fs-5 {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .contact-section {
+                padding: 1rem;
+            }
+
+            .contact-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                font-size: 0.875rem;
+            }
+
+            .contact-form button {
+                font-size: 0.875rem;
+            }
+
+            footer .fs-5 {
+                font-size: 0.875rem;
+            }
+        }
+
+        .link-btn {
+            position: relative;
+            width: 192px;
+            height: 56px;
+            background-color: white;
+            border-radius: 32px;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .link-btn div {
+            position: absolute;
+            height: 48px;
+            width: 25%;
+            background-color: #4caf50;
+            border-radius: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 4px;
+            left: 4px;
+            transition: width 0.5s ease;
+            z-index: 10;
+        }
+
+        .link-btn:hover div {
+            width: 184px;
+        }
+
+        .link-btn i {
+            font-size: 24px;
+            color: black;
+        }
+
+        .link-btn p {
+            position: relative;
+            z-index: 1;
+            margin-left: 18px;
+            transition: 0.3s ease;
+            margin-top: 5px;
         }
     </style>
 </head>
 
 <body class="container-fluid">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light p-4">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="./for_front.html">
-                    <img src="https://forefrontclean.co.uk/wp-content/uploads/2022/05/Logo-02.svg" alt="Forefront All Cleaning Logo" width="180px">
+                    <img src="https://forefrontclean.co.uk/wp-content/uploads/2022/05/Logo-02.svg"
+                        alt="Forefront All Cleaning Logo" width="180px">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                       
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                SERVICES 
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                SERVICES
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="./Carpet-cleaning.html">CARPET CLEANING</a></li>
-                                <li><a class="dropdown-item" href="./Commercial-cleaning.html">COMMERCIAL CLEANING</a></li>
+                                <li><a class="dropdown-item" href="./Commercial-cleaning.html">COMMERCIAL CLEANING</a>
+                                </li>
                                 <li><a class="dropdown-item" href="./Domestic-cleaning.html">DOMESTIC CLEANING</a></li>
-                                <li><a class="dropdown-item" href="./EndofTenancy-Cleaning.html">END OF TENANCY CLEANING</a></li>
+                                <li><a class="dropdown-item" href="./EndofTenancy-Cleaning.html">END OF TENANCY
+                                        CLEANING</a></li>
                             </ul>
                         </li>
-                        
                         <li class="nav-item">
                             <a class="nav-link" href="./book-cleaner.html">BOOK A CLEANER</a>
                         </li>
@@ -89,47 +231,77 @@
         </nav>
     </header>
     <main>
-        <section class="contact-section d-flex justify-content-around pb-3">
-            <div >
+        <section class="contact-section d-flex flex-column flex-md-row justify-content-around pb-3">
+            <div class="flex-fill mb-3 mb-md-0">
                 <h2>Contact Us</h2>
-            <p>If you have any questions, concerns, or queries regarding a custom <br> cleaning job – do not hesitate and
-                contact us via the form.</p>
-            <p>Alternatively, call us on <a href="tel:+91777737737373" class="text-decoration-none" style="color: brown;">07943 272 519</a> to discuss your requirements.</p>
-            <address>
-                Forefront All Cleaning Ltd<br>
-                Unit 30, 363-365 Coventry Road<br>
-                Small Heath, Birmingham<br>
-                B10 0SW
-            </address>
+                <p>If you have any questions, concerns, or queries regarding a custom cleaning job – do not hesitate and
+                    contact us via the form.</p>
+                <p>Alternatively, call us on <a href="tel:+91777737737373" class="text-decoration-none"
+                        style="color: brown;">07943 272 519</a> to discuss your requirements.</p>
+                <address>
+                    Forefront All Cleaning Ltd<br>
+                    Unit 30, 363-365 Coventry Road<br>
+                    Small Heath, Birmingham<br>
+                    B10 0SW
+                </address>
             </div>
 
-            <div>
+            <div class="flex-fill">
                 <form class="contact-form">
                     <div class="form-group">
-                    <label for="">Name *</label><br>
-                    <input type="text" placeholder="First Name" required>  <input type="text" placeholder="Last Name" required>
+                        <label for="first-name">Name *</label>
+                        <div class="name-inputs">
+                            <input type="text" id="first-name" placeholder="First Name" required>
+                            <input type="text" id="last-name" placeholder="Last Name" required>
+                        </div>
                     </div>
                     <div class="form-group">
-                    <label for="">Phone Number</label><br>
-                    <input type="text" placeholder="" required>
+                        <label for="phone-number">Phone Number</label>
+                        <input id="phone-number" type="tel" placeholder="" required>
                     </div>
                     <div class="form-group">
-                    <label for="">Email *</label><br>
-                    <input type="email" placeholder="" required>
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" placeholder="" required>
                     </div>
-                    <label for="">Comment or Message *</label>
                     <div class="form-group">
-                    
-                    <textarea placeholder="Comment or Message" required></textarea>
+                        <label for="message">Comment or Message *</label>
+                        <textarea id="message" placeholder="Comment or Message" required></textarea>
                     </div>
                     <button type="submit">Submit</button>
                 </form>
             </div>
         </section>
     </main>
-    <footer class="d-flex justify-content-center bg-primary-subtle p-2">
-        <div class=" fs-5">© 2024 Forefront All Cleaning Ltd | Designed and developed by Haptech</div>
+    <a href="index.html" class="link-btn">
+        <div>
+            <i class="fas fa-arrow-left"></i>
+        </div>
+        <p>Go Back To Home</p>
+    </a>
+    <footer>
+        <div class="fs-5">© 2024 Forefront All Cleaning Ltd | Designed and developed by Haptech</div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var input = document.querySelector("#phone-number");
+            var iti = window.intlTelInput(input, {
+                initialCountry: "gb", // default country code (UK in this case)
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.min.js", // for formatting/validation
+                separateDialCode: true // Only show the country code in the input
+            });
+
+            // Hide the country code dropdown for mobile
+            if (window.innerWidth <= 768) {
+                iti.setCountry("gb");
+                input.addEventListener("focus", function () {
+                    input.classList.add("iti-hide-countries");
+                });
+                input.addEventListener("blur", function () {
+                    input.classList.remove("iti-hide-countries");
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
